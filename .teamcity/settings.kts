@@ -31,6 +31,7 @@ version = "2024.03"
 project {
 
     vcsRoot(HttpsGithubComOllvenLevel11refsHeadsMain)
+    vcsRoot(HttpsGithubComOllvenLevel11refsHeadsMain1)
 
     buildType(Build2)
     buildType(Build)
@@ -40,7 +41,7 @@ object Build : BuildType({
     name = "Build"
 
     vcs {
-        root(HttpsGithubComOllvenLevel11refsHeadsMain)
+        root(HttpsGithubComOllvenLevel11refsHeadsMain1)
     }
 
     steps {
@@ -81,6 +82,18 @@ object HttpsGithubComOllvenLevel11refsHeadsMain : GitVcsRoot({
     url = "https://github.com/ollven/level1-1"
     branch = "refs/heads/main"
     branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "ollven"
+        password = "credentialsJSON:c6fc6010-81fc-4566-a6a2-0833552ebdcd"
+    }
+})
+
+object HttpsGithubComOllvenLevel11refsHeadsMain1 : GitVcsRoot({
+    name = "https://github.com/ollven/level1-1#refs/heads/main (1)"
+    url = "https://github.com/ollven/level1-1"
+    branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
+    checkoutSubmodules = GitVcsRoot.CheckoutSubmodules.IGNORE
     authMethod = password {
         userName = "ollven"
         password = "credentialsJSON:c6fc6010-81fc-4566-a6a2-0833552ebdcd"
