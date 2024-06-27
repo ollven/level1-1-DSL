@@ -67,6 +67,13 @@ object Build2 : BuildType({
     vcs {
         root(HttpsGithubComOllvenLevel11refsHeadsMain)
     }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "pwd"
+        }
+    }
 })
 
 object HttpsGithubComOllvenLevel11refsHeadsMain : GitVcsRoot({
