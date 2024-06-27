@@ -32,6 +32,7 @@ project {
 
     vcsRoot(HttpsGithubComOllvenLevel11refsHeadsMain)
 
+    buildType(Build2)
     buildType(Build)
 }
 
@@ -58,6 +59,10 @@ object Build : BuildType({
         perfmon {
         }
     }
+})
+
+object Build2 : BuildType({
+    name = "Build2"
 })
 
 object HttpsGithubComOllvenLevel11refsHeadsMain : GitVcsRoot({
