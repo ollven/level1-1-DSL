@@ -63,6 +63,10 @@ object Build : BuildType({
 
 object Build2 : BuildType({
     name = "Build2"
+
+    vcs {
+        root(HttpsGithubComOllvenLevel11refsHeadsMain)
+    }
 })
 
 object HttpsGithubComOllvenLevel11refsHeadsMain : GitVcsRoot({
