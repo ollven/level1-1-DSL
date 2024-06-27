@@ -65,6 +65,7 @@ object HttpsGithubComOllvenLevel11refsHeadsMain : GitVcsRoot({
     url = "https://github.com/ollven/level1-1"
     branch = "refs/heads/main"
     branchSpec = "refs/heads/*"
+    checkoutSubmodules = GitVcsRoot.CheckoutSubmodules.IGNORE
     authMethod = password {
         userName = "ollven"
         password = "credentialsJSON:c6fc6010-81fc-4566-a6a2-0833552ebdcd"
